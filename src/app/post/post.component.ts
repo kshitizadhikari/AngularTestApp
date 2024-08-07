@@ -17,6 +17,8 @@ import { PostListComponent } from '../post-list/post-list.component';
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit, AfterViewInit {
+  myPost: string = 'first post here';
+
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {}

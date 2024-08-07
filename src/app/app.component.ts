@@ -13,6 +13,13 @@ import { PostListComponent } from './post-list/post-list.component';
 })
 export class AppComponent implements AfterViewInit {
   toNav: string = 'hello nav from app';
+
+  @ViewChild(PostComponent) postComp!: PostComponent;
+  firstPost: string = '';
   constructor() {}
-  ngAfterViewInit(): void {}
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.firstPost = this.postComp.myPost;
+    });
+  }
 }
