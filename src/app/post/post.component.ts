@@ -1,18 +1,23 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+  AfterViewInit,
+} from '@angular/core';
+import { PostListComponent } from '../post-list/post-list.component';
 
 @Component({
   selector: 'app-post',
   standalone: true,
-  imports: [],
+  imports: [PostListComponent],
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css'],
 })
-export class PostComponent implements OnInit {
-  title: string = 'Posts';
-
-  @Input() fromParent: string = '';
-
-  constructor() {}
-
+export class PostComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
+
+  ngAfterViewInit(): void {}
 }

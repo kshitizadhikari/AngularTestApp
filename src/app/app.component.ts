@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
+import { PostListComponent } from './post-list/post-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, PostComponent],
+  imports: [RouterOutlet, NavbarComponent, PostComponent, PostListComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = 'test-app';
-  parentMessage = 'This is from the parent';
+export class AppComponent implements AfterViewInit {
+  toNav: string = 'hello nav from app';
+  constructor() {}
+  ngAfterViewInit(): void {}
 }

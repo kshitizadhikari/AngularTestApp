@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css',
   // styles: ['h1{ color: red}'],
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  @Input() toNavFromApp: string = '';
+}
