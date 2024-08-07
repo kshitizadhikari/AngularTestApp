@@ -10,5 +10,10 @@ import { Component, Input } from '@angular/core';
   // styles: ['h1{ color: red}'],
 })
 export class NavbarComponent {
+  purple: boolean = true;
   @Input() toNavFromApp: string = '';
+
+  changeNavColor() {
+    this.purple = !this.purple;
+  }
 }

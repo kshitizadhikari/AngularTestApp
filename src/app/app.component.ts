@@ -13,7 +13,7 @@ import { PostListComponent } from './post-list/post-list.component';
 })
 export class AppComponent implements AfterViewInit {
   toNav: string = 'hello nav from app';
-
+  googleLink: string = 'https://www.google.com';
   @ViewChild(PostComponent) postComp!: PostComponent;
   firstPost: string = '';
   constructor() {}
