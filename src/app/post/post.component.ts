@@ -19,6 +19,11 @@ import { PostListComponent } from '../post-list/post-list.component';
 export class PostComponent implements OnInit, AfterViewInit {
   myPost: string = 'first post here';
 
+  itemData: string = '';
+
+  receiveItem($e: string) {
+    this.itemData = $e;
+  }
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {}

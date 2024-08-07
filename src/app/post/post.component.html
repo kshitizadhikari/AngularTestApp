@@ -1,1 +1,4 @@
 <h1>post works</h1>
+<p>Item: {{ itemData }}</p>
+
+<app-post-list (itemEmitter)="receiveItem($event)"></app-post-list>
